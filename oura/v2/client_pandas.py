@@ -91,7 +91,9 @@ class OuraClientDataFrameV2(OuraClientV2):
         return to_pandas(workouts, metrics, date_key="day")
 
     def sleep_df(self, start=None, end=None, metrics=None):
-        raise NotImplementedError
+        sleep = super().sleep(start, end)["data"]
+        return to_pandas(sleep, metrics, date_key="day")
 
     def readiness_df(self, start=None, end=None, metrics=None):
-        raise NotImplementedError
+        readiness = super().daily_readiness(start, end)["data"]
+        return to_pandas(readiness, metrics, date_key="day")

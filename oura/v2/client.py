@@ -87,6 +87,9 @@ class OuraClientV2:
     def sleep_time(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "sleep_time")
 
+    def tags(self, start_date=None, end_date=None, next_token=None):
+        return self._get_summary(start_date, end_date, next_token, "tags")
+
     def workouts(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "workout")
 
