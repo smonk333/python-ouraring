@@ -67,8 +67,7 @@ class OuraClientDataFrameV2(OuraClientV2):
 
     def activity_df(self, start=None, end=None, metrics=None):
         activity_summary = super().daily_activity(start, end)["data"]
-        df = to_pandas(activity_summary, metrics)
-        return df
+        return to_pandas(activity_summary, metrics)
 
     def heart_rate_df(self, start=None, end=None, metrics=None):
         readiness_summary = super().heartrate(start, end)["data"]
