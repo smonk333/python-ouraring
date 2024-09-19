@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 
-from oura import OuraClient
+from oura_contraindications import OuraClient
 
 
 def get_self():

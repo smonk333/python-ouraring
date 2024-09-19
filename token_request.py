@@ -3,7 +3,7 @@ import os
 import sys
 import threading
 import webbrowser
-from oura import OuraOAuth2Client
+from oura_contraindications import OuraOAuth2Client
 from flask import Flask, request
 
 app = Flask(__name__)
