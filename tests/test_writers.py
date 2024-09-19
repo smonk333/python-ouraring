@@ -1,6 +1,6 @@
 import os
 
-from oura.export.writers import save_as_xlsx, tableize
+from oura_contraindications.export.writers import save_as_xlsx, tableize
 
 from .mock_client import MockDataFrameClient
 

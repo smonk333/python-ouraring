@@ -1,4 +1,4 @@
-from oura.converters import ActivityConverter, SleepConverter
+from oura_contraindications.converters import ActivityConverter, SleepConverter
 
 from .mock_client import MockDataFrameClient
 

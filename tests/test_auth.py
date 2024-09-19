@@ -2,7 +2,7 @@ import json
 
 import requests_mock
 
-from oura import OuraOAuth2Client
+from oura_contraindications import OuraOAuth2Client
 
 
 def test_build_authorize_endpoint():

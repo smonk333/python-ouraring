@@ -3,7 +3,7 @@ from urllib.parse import parse_qs, urlparse
 
 import requests_mock
 
-from oura import OuraClient
+from oura_contraindications import OuraClient
 
 adapter = requests_mock.Adapter()
 

@@ -1,4 +1,4 @@
-from oura import OuraClient, OuraClientDataFrame
+from oura_contraindications import OuraClient, OuraClientDataFrame
 
 
 class MockClient(OuraClient):
