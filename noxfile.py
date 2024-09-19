@@ -1,7 +1,7 @@
 import nox
 
 nox.options.sessions = "lint", "tests"
-locations = ["oura", "tests", "samples", "noxfile.py"]
+locations = ["oura_contraindications", "tests", "samples", "noxfile.py"]
 
 
 @nox.session
@@ -43,6 +43,6 @@ def isort(session):
 def docs(session):
     session.chdir("docs")
     session.install("-r", "requirements.txt")
-    # session.run("sphinx-apidoc", "-f", "-o", "source", "../oura")
+    # session.run("sphinx-apidoc", "-f", "-o", "source", "../oura_contraindications")
     # session.run("make", "clean", external=True)
     session.run("make", "html", external=True)

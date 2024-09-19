@@ -16,9 +16,9 @@ class OuraOAuth2Client:
         """
         Initialize the client for oauth flow.
 
-        :param client_id: The client id from oura portal.
+        :param client_id: The client id from oura_contraindications portal.
         :type client_id: str
-        :param client_secret: The client secret from oura portal.
+        :param client_secret: The client secret from oura_contraindications portal.
         :type client_secret: str
         """
         self.client_id = client_id

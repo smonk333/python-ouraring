@@ -135,7 +135,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'python-oura.tex', 'python-oura Documentation',
+    (master_doc, 'python-oura_contraindications.tex', 'python-oura_contraindications Documentation',
      'turing-compet', 'manual'),
 ]
 
@@ -145,7 +145,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'python-oura', 'python-oura Documentation',
+    (master_doc, 'python-oura_contraindications', 'python-oura_contraindications Documentation',
      [author], 1)
 ]
 
@@ -156,8 +156,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'python-oura', 'python-oura Documentation',
-     author, 'python-oura', 'One line description of project.',
+    (master_doc, 'python-oura_contraindications', 'python-oura_contraindications Documentation',
+     author, 'python-oura_contraindications', 'One line description of project.',
      'Miscellaneous'),
 ]
 

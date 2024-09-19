@@ -6,7 +6,7 @@ Oura API Library
 
 ------------------
 
-Welcome to the python oura library!
+Welcome to the python oura_contraindications library!
 
 For more information, please check the github:
     https://github.com/turing-complet/python-ouraring

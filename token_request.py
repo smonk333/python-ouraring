@@ -37,7 +37,7 @@ if __name__ == '__main__':
     auth_client = OuraOAuth2Client(*sys.argv[1:])
     browser_authorize(auth_client)
 
-    # test_response = server.oura.user_info()
+    # test_response = server.oura_contraindications.user_info()
     app.run(debug = False, host='0.0.0.0', port=3030)
     
     input("Press any key to close")
