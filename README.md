@@ -3,7 +3,7 @@
 
 Easiest way is to get it from [PyPI](https://pypi.org/project/oura/):
 
-`pip install oura`
+`pip install oura-contraindications`
 
 ## Project maintenance
 If anyone is interested in taking over maintenance of this project, please contact me at
@@ -24,7 +24,7 @@ Enjoy the latest clients as follows (and see
 [docs](https://cloud.ouraring.com/v2/docs)). All methods except `personal_info` take a
 `start_date`, `end_date`, and `next_token`.
 ```
-from oura.v2 import OuraClientV2, OuraClientDataFrameV2
+from oura_contraindications.v2 import OuraClientV2, OuraClientDataFrameV2
 v2 = OuraClientDataFrameV2(personal_access_token="MY_PAT")
 
 # methods will be named after the url path (see docs linked above)
@@ -57,7 +57,7 @@ Some sample code is located in the [samples](samples) directory, maybe it will b
 
 If you are writing a real application, use the following pattern. Basically, the work is done by the underlying oauthlib to use the refresh token whenever the access token has expired, and you supply the refresh callback to save the new tokens for next time. This seems to have worked fine for me, but I don't actually use this library that much
 ```
-from oura import OuraClient, OuraOAuth2Client
+from oura_contraindications import OuraClient, OuraOAuth2Client
 
 auth_client = OuraOAuth2Client(client_id='my_application', client_secret='random-string')
 url = auth_client.authorize_endpoint(scope='defaults to all scopes', 'https://localhost/myendpoint')
