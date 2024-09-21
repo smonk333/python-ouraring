@@ -95,8 +95,10 @@ class OuraClientV2:
     def sleep_time(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "sleep_time")
 
-    def tags(self, start_date=None, end_date=None, next_token=None):
-        return self._get_summary(start_date, end_date, next_token, "tags")
+    # tags endpoint has been deprecated, please use enhanced_tag()
+    
+    #def tags(self, start_date=None, end_date=None, next_token=None):
+    #    return self._get_summary(start_date, end_date, next_token, "tags")
 
     def vo2Max(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "vO2_max")
