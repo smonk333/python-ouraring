@@ -68,31 +68,39 @@ class OuraClientDataFrameV2(OuraClientV2):
     def activity_df(self, start=None, end=None, metrics=None):
         activity_summary = super().daily_activity(start, end)["data"]
         return to_pandas(activity_summary, metrics)
+    
+    def cva_df(self, start=None, end=None, metrics=None):
+        cva = super().daily_cva(start, end)["data"]
+        return to_pandas(cva, metrics)
 
     def heart_rate_df(self, start=None, end=None, metrics=None):
-        readiness_summary = super().heartrate(start, end)["data"]
-        return to_pandas(readiness_summary, metrics)
+        heartrate = super().heartrate(start, end)["data"]
+        return to_pandas(heartrate, metrics)
 
     def personal_info_df(self):
         info = super().personal_info()
         return pd.DataFrame([info])
 
+    def readiness_df(self, start=None, end=None, metrics=None):
+        readiness = super().daily_readiness(start, end)["data"]
+        return to_pandas(readiness, metrics, date_key="day")
+
     def sessions_df(self, start=None, end=None, metrics=None):
         sessions = super().session(start, end)["data"]
         return to_pandas(sessions, metrics, date_key="day")
+    
+    def sleep_df(self, start=None, end=None, metrics=None):
+        sleep = super().sleep(start, end)["data"]
+        return to_pandas(sleep, metrics, date_key="day")
 
     def tags_df(self, start=None, end=None, metrics=None):
         tags = super().tags(start, end)["data"]
         return to_pandas(tags, metrics)
 
+    def vo2_df(self, start=None, end=None, metrics=None):
+        vo2 = super().vo2Max(start, end)["data"]
+        return to_pandas(vo2, metrics)
+
     def workouts_df(self, start=None, end=None, metrics=None):
         workouts = super().workouts(start, end)["data"]
         return to_pandas(workouts, metrics, date_key="day")
-
-    def sleep_df(self, start=None, end=None, metrics=None):
-        sleep = super().sleep(start, end)["data"]
-        return to_pandas(sleep, metrics, date_key="day")
-
-    def readiness_df(self, start=None, end=None, metrics=None):
-        readiness = super().daily_readiness(start, end)["data"]
-        return to_pandas(readiness, metrics, date_key="day")
