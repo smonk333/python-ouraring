@@ -68,7 +68,7 @@ class OuraClientDataFrameV2(OuraClientV2):
     def activity_df(self, start=None, end=None, metrics=None):
         activity_summary = super().daily_activity(start, end)["data"]
         return to_pandas(activity_summary, metrics)
-    
+
     def cva_df(self, start=None, end=None, metrics=None):
         cva = super().daily_cva(start, end)["data"]
         return to_pandas(cva, metrics)
@@ -88,7 +88,7 @@ class OuraClientDataFrameV2(OuraClientV2):
     def sessions_df(self, start=None, end=None, metrics=None):
         sessions = super().session(start, end)["data"]
         return to_pandas(sessions, metrics, date_key="day")
-    
+
     def sleep_df(self, start=None, end=None, metrics=None):
         sleep = super().sleep(start, end)["data"]
         return to_pandas(sleep, metrics, date_key="day")
