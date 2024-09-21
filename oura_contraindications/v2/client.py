@@ -52,7 +52,9 @@ class OuraClientV2:
         return self._get_summary(start_date, end_date, next_token, "daily_activity")
 
     def daily_cva(self, start_date=None, end_date=None, next_token=None):
-        return self._get_summary(start_date, end_date, next_token, "daily_cardiovascular_age")
+        return self._get_summary(
+            start_date, end_date, next_token, "daily_cardiovascular_age"
+            )
 
     def daily_readiness(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "daily_readiness")
