@@ -51,8 +51,14 @@ class OuraClientV2:
         # start_date default to end_date - 1 day
         return self._get_summary(start_date, end_date, next_token, "daily_activity")
 
+    def daily_cva(self, start_date=None, end_date=None, next_token=None):
+        return self._get_summary(start_date, end_date, next_token, "daily_cardiovascular_age")
+
     def daily_readiness(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "daily_readiness")
+
+    def daily_resilience(self, start_date=None, end_date=None, next_token=None):
+        return self._get_summary(start_date, end_date, next_token, "daily_resilience")
 
     def daily_sleep(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "daily_sleep")
@@ -89,6 +95,9 @@ class OuraClientV2:
 
     def tags(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "tags")
+
+    def vo2Max(self, start_date=None, end_date=None, next_token=None):
+        return self._get_summary(start_date, end_date, next_token, "vO2_max")
 
     def workouts(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "workout")
